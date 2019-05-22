@@ -178,7 +178,7 @@ solver_status <- function(solution) UseMethod("solver_status")
 solver_status.solution <- function(solution) {
   #solution$status
   status <- if (solution$status$code == 0) "optimal" else paste("not optimal. the solver message:", solution$status$msg)
-  
+  status
 }
 
 #' Gets the column duals of a solution
